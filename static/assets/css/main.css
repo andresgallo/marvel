@@ -1,0 +1,242 @@
+* {
+	padding:0;
+	margin:0;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	font-family:sans-serif;
+	}
+
+.putMeAtRight {float:right;}
+
+
+html,
+body {background:#007b97;font-family:Arial, Helvetica, sans-serif;color:#565a5c;position:relative;}
+
+
+
+/*Structure*/
+#headerWrapFixHeight,
+#headerWrap {
+	height:100px;
+	position:relative;}
+	
+#headerWrap {position:fixed;top:0;left:0;z-index:9999999999999999;}
+#logo img{width:221px;height:auto;z-index:9999999999999999;position:relative;box-shadow:1px 1px 2px #333;}
+#aboutExcercise {
+	position:absolute;left:0;top:130px;
+	background:#EC1D27;
+	color:#fff;
+	border-top-right-radius:7px;border-bottom-right-radius:7px;
+	display:block;width:25px;height:25px;line-height:25px;
+	padding:3px;box-shadow:1px 1px 2px #444;
+	text-align:center;text-decoration:none;}
+.sectionPad {
+	padding:20px;}
+	
+.bgLight {
+	background:#D0E7ED;}
+
+
+
+/*Pages*/
+#containAlpha {text-align:center;}
+
+.singleCharItem:link {
+	display:-moz-inline-stack;
+	display:inline-block;
+	font-size:40px;
+	font-weight:600;
+	padding:7px;
+	color:#fff;
+	text-shadow:-1px -1px 0 #005366;
+	cursor:pointer;
+	-moz-transition:all ease 300ms;
+	-webkit-transition:all ease 300ms;
+	-o-transition:all ease 300ms;
+	-ms-transition:all ease 300ms;
+	transition:all ease 300ms;
+	text-decoration:none;}
+	.singleCharItem:visited {color:#fff;}
+	.singleCharItem:hover {/*Not all browsers support the scale transformation yet :( Though its ok since its not important behavior*/
+		-moz-transform:scale(1.5,1.5);
+		-webkit-transform:scale(1.5,1.5);
+		-o-transform:scale(1.5,1.5);
+		-ms-transform:scale(1.5,1.5);
+		transform:scale(1.5,1.5);}
+	.ie6 .singleCharItem,
+	.ie7 .singleCharItem{display:inline;}
+	
+	
+	
+/***SPECIAL CLASSES****/
+/* =============================================================================
+   OVERLAYS - These classes set the look for the overlays. These are divided by specificity.
+   ========================================================================== */
+   
+/*Overlays -Global*/
+#overlayRelativer,
+.dPopMask {
+	position:absolute;
+	top:0;left:0;
+	width:100%;
+	z-index:99999999;}
+	
+.dPopMask {
+	background:rgba(0,0,0,.8) url(../img/textures/textureOverlay.png) repeat;
+	min-height:416px;}
+	
+#overlayRelativer	 {
+	height:0;
+	overflow:visible;}
+	
+#dPopWin {
+	background:#fff;
+	border-radius:7px;
+	margin:77px auto;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	position:relative;z-index:99999999;}
+	
+.dPopClose {
+	width:35px;height:35px;position:absolute;
+	right:-13px;top:-13px;
+	background:url(../img/icons/btn_X.png);}
+	
+.bringDPopUpIn {display:block;}
+.bringDPopUpOut {display:none;}
+
+.deviceTypeIsIos .bringDPopUpIn {
+	opacity:1;
+	-webkit-transform:scale(1);
+	-webkit-animation:fadeScaleIn 500ms 1;
+	-moz-transform:scale(1);
+	-moz-animation:fadeScaleIn 500ms 1;
+}
+.deviceTypeIsIos .bringDPopUpOut {
+	-webkit-transform:scale(.1);
+	opacity:0;
+	-webkit-animation:fadeScaleOut 500ms 1 ;
+	-moz-transform:scale(.1);
+	-moz-animation:fadeScaleIn 500ms 1;
+}
+
+@-webkit-keyframes fadeScaleIn{
+0%{-webkit-transform:scale(1);opacity:1;}
+12%{-webkit-transform:scale(.85);opacity:.5;}
+50%{-webkit-transform:scale(1.05);opacity:1;}
+75%{-webkit-transform:scale(.95);opacity:1;}
+100%{-webkit-transform:scale(1);opacity:1;}
+}
+@-webkit-keyframes fadeScaleOut{
+0%{-webkit-transform:scale(1);opacity:1;}
+100%{-webkit-transform:scale(.1);opacity:0;}
+}
+
+@-moz-keyframes fadeScaleIn{
+0%{-moz-transform:scale(1);opacity:1;}
+12%{-moz-transform:scale(.85);opacity:.5;}
+50%{-moz-transform:scale(1.05);opacity:1;}
+75%{-moz-transform:scale(.95);opacity:1;}
+100%{-moz-transform:scale(1);opacity:1;}
+}
+@-moz-keyframes fadeScaleOut{
+0%{-moz-transform:scale(1);opacity:1;}
+100%{-moz-transform:scale(.1);opacity:0;}
+}
+
+.dPopSpacer {
+	padding:15px;}
+	
+/*Overlays specific classes*/
+.standardPopLook {
+	background:#fff;
+	width:90%;
+	text-align:left;
+	padding:25px 0;}	
+	
+.standardPopLook h1 {
+	font-size:22px;
+	margin-bottom:15px;}
+	
+.standardPopLook #dPopLogoWrap {
+	padding:5px;
+	background:#00a8cc;}
+.standardPopLook #dPopLogoWrap img {
+	margin:10px auto;}
+	
+.standardPopLook h3 {
+	font-size:18px;
+	margin:10px 0;}
+.standardPopLook h3 strong {
+	display:block;
+	font-size:26px;
+	text-align:center;}
+	
+.smCenteredPop {
+	text-align:center;
+	width:60% !important;
+	padding:30px;}
+	
+.loaderPop {
+	background:rgba(0,0,0,.7) !important;
+	margin:110px auto !important;}
+	
+.loaderPop span {
+	display:block;color:#fff;
+	font-size:17px;font-weight:600;}
+	
+.warnPop {
+	background:red !important;
+	color:#fff;}
+	
+	
+/**********************
+LISTS - These provides the counters as a css pseudo elem. Provides better styling possibilites
+**********************/
+ol,ul {list-style-type:none;}
+ol {
+	counter-reset:li;
+	list-style-position:inside;}
+	
+ol > li:before {
+	content:counter(li) '.';
+	counter-increment:li;
+	float:left;
+	font-weight:600;
+	margin-right:10px;}
+
+li {
+	line-height:1.6em;}	
+	
+/*non universal List styles */
+.selectCharacter li {
+	line-height:1.6em;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* Safari 4+, Chrome */
+  	background-image: -webkit-linear-gradient(top, #fff, #eee); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+  	background-image:    -moz-linear-gradient(top, #fff, #eee); /* Firefox 3.6-15 */
+  	background-image:      -o-linear-gradient(top, #fff, #eee); /* Opera 11.10+ */
+  	background-image:         linear-gradient(to bottom, #fff, #eee); /* Firefox 16+ */
+	padding:6px 5px;}
+	
+.selectCharacter li a {
+	display:block;
+	cursor:pointer;
+	
+	color:#444;text-shadow:1px 1px 0 #fff;
+	text-decoration:none;}
+	
+.selectCharacter li h4 {
+	display:inline;
+}
+
+.selectCharacter li:after {
+	content : '';
+	display:block;clear:both;}
+
+.listDataRgt {
+	background:#EFEFEF;
+	padding:2px 7px;
+	border-top-left-radius:7px;
+	box-shadow:inset 1px 2px 3px #ddd;}	
+.listDataRgt em {
+	color:#009648;font-weight:600;}
+	

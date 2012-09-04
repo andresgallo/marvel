@@ -1,0 +1,12 @@
+#logo img{width:90px;height:auto;}
+#headerWrapFixHeight,
+#headerWrap {
+	height:50px;}
+#dPopWin {
+	background:#fff;
+	border-radius:7px;
+	margin:40px auto;}
+	
+.listDataRgt  {
+	font-size:10px;
+	clear:both;}
